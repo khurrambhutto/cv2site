@@ -1,0 +1,4 @@
+pdfplumber
+langchain
+langchain-google-genai
+python-dotenv
