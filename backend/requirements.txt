@@ -1,5 +1,9 @@
 fastapi
-uvicorn[standard]
+uvicorn
+pdfplumber
+google-generativeai
+python-multipart
 python-dotenv
 langchain-google-genai
-pdfplumber
+langchain
+pydantic
