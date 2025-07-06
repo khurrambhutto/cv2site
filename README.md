@@ -46,7 +46,6 @@ cd backend
 pip install -r requirements.txt
 
 # Create environment file
-echo "GEMINI_API_KEY=your_gemini_api_key_here" > .env
 
 # Start the backend server
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
@@ -164,9 +163,21 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:3001,http://localhost:3002
 
 1. **Run locally** using this guide
 2. **Test** with your own PDF resume
-3. **Deploy** using `deployment-guide.md`
+3. **Deploy** using Railway (Backend) + Vercel (Frontend)
 4. **Customize** the portfolio templates
 5. **Share** with friends and colleagues!
+
+## 🚂 **Railway Deployment (Backend)**
+
+Your backend is already deployed on Railway! 
+
+**To connect frontend:**
+1. Get your Railway URL from dashboard
+2. Create `frontend/.env` file with:
+   ```
+   REACT_APP_API_URL=https://your-railway-url.railway.app
+   ```
+3. Deploy frontend on Vercel
 
 ---
 

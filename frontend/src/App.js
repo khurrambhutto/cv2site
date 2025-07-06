@@ -20,7 +20,8 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:8000/upload-pdf/', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/upload-pdf/`, {
         method: 'POST',
         body: formData,
       });
