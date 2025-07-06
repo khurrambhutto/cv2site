@@ -6,27 +6,40 @@ Transform your PDF resume into a beautiful, professional HTML portfolio with AI-
 ![LinkedIn Theme](https://img.shields.io/badge/Theme-LinkedIn-0a66c2)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+---
+
+## 🌍 **Live Demo**
+
+Try it out now:
+
+🔗 **[cv2site.vercel.app](https://cv2site.vercel.app/)** — Instantly upload your PDF resume and generate a professional HTML portfolio.
+
+---
+
 ## 📋 **Overview**
 
 This project uses AI (Google Gemini) to extract structured data from PDF resumes and generates beautiful HTML portfolios with a LinkedIn-inspired design.
 
 ### **Tech Stack**
-- **Frontend:** React.js with modern UI
-- **Backend:** FastAPI (Python)
-- **AI:** Google Gemini API
-- **PDF Processing:** pdfplumber
-- **Styling:** Custom CSS (LinkedIn-inspired)
+
+* **Frontend:** React.js with modern UI
+* **Backend:** FastAPI (Python)
+* **AI:** Google Gemini API
+* **PDF Processing:** pdfplumber
+* **Styling:** Custom CSS (LinkedIn-inspired)
 
 ---
 
 ## 🚀 **Quick Start - Run Locally**
 
 ### **Prerequisites**
-- Python 3.8+ installed
-- Node.js 16+ installed
-- Google Gemini API key ([Get it here](https://aistudio.google.com/app/apikey))
+
+* Python 3.8+ installed
+* Node.js 16+ installed
+* Google Gemini API key ([Get it here](https://aistudio.google.com/app/apikey))
 
 ### **1. Clone & Setup**
+
 ```bash
 # Clone the repository
 git clone <your-repo-url>
@@ -38,6 +51,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 ### **2. Backend Setup**
+
 ```bash
 # Navigate to backend
 cd backend
@@ -52,6 +66,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ### **3. Frontend Setup** (New Terminal)
+
 ```bash
 # Navigate to frontend
 cd frontend
@@ -64,13 +79,15 @@ npm start
 ```
 
 ### **4. Access the Application**
-- **Frontend:** http://localhost:3000 (or 3001/3002 if 3000 is busy)
-- **Backend API:** http://localhost:8000
-- **API Documentation:** http://localhost:8000/docs
+
+* **Frontend:** [http://localhost:3000](http://localhost:3000) (or 3001/3002 if 3000 is busy)
+* **Backend API:** [http://localhost:8000](http://localhost:8000)
+* **API Documentation:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
 ## 📁 **Project Structure**
+
 ```
 linkedin/
 ├── backend/
@@ -95,6 +112,7 @@ linkedin/
 ## 🔧 **Detailed Setup Instructions**
 
 ### **Backend Dependencies** (`backend/requirements.txt`)
+
 ```
 fastapi==0.104.1
 uvicorn==0.24.0
@@ -107,6 +125,7 @@ pydantic==2.5.0
 ```
 
 ### **Frontend Dependencies** (`frontend/package.json`)
+
 ```json
 {
   "dependencies": {
@@ -118,6 +137,7 @@ pydantic==2.5.0
 ```
 
 ### **Environment Variables** (`.env`)
+
 ```bash
 # Backend environment variables
 GEMINI_API_KEY=your_gemini_api_key_here
@@ -126,10 +146,10 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:3001,http://localhost:3002
 
 ---
 
-## 🎯 **How to Use**
+## 🌟 **How to Use**
 
 1. **Start both servers** (backend on :8000, frontend on :3000)
-2. **Open** http://localhost:3000 in your browser
+2. **Open** [http://localhost:3000](http://localhost:3000) in your browser
 3. **Upload** a PDF resume by dragging & dropping or clicking
 4. **Wait** for AI processing (usually 10-30 seconds)
 5. **Preview** the generated portfolio
@@ -139,23 +159,23 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:3001,http://localhost:3002
 
 ## 📱 **Features**
 
-- ✅ **AI-Powered Parsing** - Extracts structured data from any resume PDF
-- ✅ **Beautiful UI** - LinkedIn-inspired professional design
-- ✅ **Responsive Design** - Works on desktop, tablet, and mobile
-- ✅ **Real-time Preview** - See your portfolio as it's generated
-- ✅ **One-Click Download** - Get your portfolio as an HTML file
-- ✅ **Professional Templates** - Clean, modern portfolio layouts
-- ✅ **Fast Processing** - Typically processes in 10-30 seconds
+* ✅ **AI-Powered Parsing** - Extracts structured data from any resume PDF
+* ✅ **Beautiful UI** - LinkedIn-inspired professional design
+* ✅ **Responsive Design** - Works on desktop, tablet, and mobile
+* ✅ **Real-time Preview** - See your portfolio as it's generated
+* ✅ **One-Click Download** - Get your portfolio as an HTML file
+* ✅ **Professional Templates** - Clean, modern portfolio layouts
+* ✅ **Fast Processing** - Typically processes in 10-30 seconds
 
 ---
 
 ## 🌐 **API Endpoints**
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/upload-pdf/` | Upload PDF and get HTML portfolio |
-| `GET` | `/docs` | API documentation |
-| `GET` | `/` | Health check |
+| Method | Endpoint       | Description                       |
+| ------ | -------------- | --------------------------------- |
+| POST   | `/upload-pdf/` | Upload PDF and get HTML portfolio |
+| GET    | `/docs`        | API documentation                 |
+| GET    | `/`            | Health check                      |
 
 ---
 
@@ -167,23 +187,28 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:3001,http://localhost:3002
 4. **Customize** the portfolio templates
 5. **Share** with friends and colleagues!
 
+---
+
 ## 🚂 **Railway Deployment (Backend)**
 
-Your backend is already deployed on Railway! 
+Your backend is already deployed on Railway!
 
 **To connect frontend:**
+
 1. Get your Railway URL from dashboard
 2. Create `frontend/.env` file with:
-   ```
+
+   ```bash
    REACT_APP_API_URL=https://your-railway-url.railway.app
    ```
 3. Deploy frontend on Vercel
 
 ---
 
-## 📞 **Support**
+## 📲 **Support**
 
 If you encounter any issues:
+
 1. Check the troubleshooting section above
 2. Ensure all dependencies are installed
 3. Verify your Gemini API key is valid
@@ -197,4 +222,4 @@ MIT License - feel free to use and modify for your projects!
 
 ---
 
-**Happy Portfolio Building! 🎉** 
+**Happy Portfolio Building! 🎉**
