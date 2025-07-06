@@ -20,6 +20,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def root():
+    return {"message": "PDF to Portfolio Generator API", "endpoints": ["/upload-pdf/", "/docs"]}
+
 @app.post("/upload-pdf/")
 async def create_upload_file(file: UploadFile = File(...)):
     pdf_content = await file.read()

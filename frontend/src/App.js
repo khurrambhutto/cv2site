@@ -21,7 +21,9 @@ function App() {
 
     try {
       const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/upload-pdf/`, {
+      // Remove trailing slash from apiUrl to avoid double slashes
+      const cleanApiUrl = apiUrl.replace(/\/$/, '');
+      const response = await fetch(`${cleanApiUrl}/upload-pdf/`, {
         method: 'POST',
         body: formData,
       });
