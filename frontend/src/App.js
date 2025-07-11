@@ -69,48 +69,52 @@ function App() {
       </header>
       
       <main className="main-content">
-        <div className="upload-section">
-          <h2 className="section-title">Create Your Portfolio</h2>
-          <p className="section-subtitle">
-            Upload your PDF resume and we'll generate a beautiful, professional portfolio website for you
-          </p>
-          
-          <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
-            <input {...getInputProps()} />
-            <div className="dropzone-content">
-              <div className="upload-icon">
-                📄
+        <div className="left-column">
+          <div className="upload-section">
+            <h2 className="section-title">Create Your Portfolio</h2>
+            <p className="section-subtitle">
+              Upload your PDF resume and we'll generate a beautiful, professional portfolio website for you
+            </p>
+            
+            <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
+              <input {...getInputProps()} />
+              <div className="dropzone-content">
+                <div className="upload-icon">
+                  📄
+                </div>
+                {fileName ? (
+                  <div className="file-name">{fileName}</div>
+                ) : (
+                  <>
+                    <p className="dropzone-text">Drag & drop your PDF resume here</p>
+                    <p className="dropzone-subtext">or click to browse files</p>
+                  </>
+                )}
               </div>
-              {fileName ? (
-                <div className="file-name">{fileName}</div>
-              ) : (
-                <>
-                  <p className="dropzone-text">Drag & drop your PDF resume here</p>
-                  <p className="dropzone-subtext">or click to browse files</p>
-                </>
-              )}
             </div>
           </div>
         </div>
         
-        {isLoading && (
-          <div className="loading">
-            <div className="loading-spinner"></div>
-            <p className="loading-text">Generating your portfolio...</p>
-          </div>
-        )}
-        
-        {htmlContent && (
-          <div className="preview-container">
-            <div className="preview-header">
-              <h2 className="preview-title">Your Portfolio Preview</h2>
-              <button className="download-btn" onClick={handleDownload}>
-                ⬇️ Download Portfolio
-              </button>
+        <div className="right-column">
+          {isLoading && (
+            <div className="loading">
+              <div className="loading-spinner"></div>
+              <p className="loading-text">Generating your portfolio...</p>
             </div>
-            <iframe srcDoc={htmlContent} title="Portfolio Preview" className="preview-iframe" />
-          </div>
-        )}
+          )}
+          
+          {htmlContent && (
+            <div className="preview-container">
+              <div className="preview-header">
+                <h2 className="preview-title">Your Portfolio Preview</h2>
+                <button className="download-btn" onClick={handleDownload}>
+                  ⬇️ Download Portfolio
+                </button>
+              </div>
+              <iframe srcDoc={htmlContent} title="Portfolio Preview" className="preview-iframe" />
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );
